@@ -1,0 +1,24 @@
+{
+  "name": "picky",
+  "version": "0.0.0",
+  "main": "./pkg/picky.js",
+  "files": [
+    "./pkg/picky_bg.wasm",
+    "./pkg/picky.js",
+    "./pkg/picky_bg.js",
+    "./pkg/picky.d.ts"
+  ],
+  "module": "./pkg/picky.js",
+  "types": "./pkg/picky.d.ts",
+  "sideEffects": [
+    "./pkg/picky.js",
+    "./pkg/snippets/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "cargo watch -i .gitignore -i 'pkg/*' -s 'wasm-pack build'"
+  },
+  "devDependencies": {
+    "wasm-pack": "^0.12.1"
+  }
+}
